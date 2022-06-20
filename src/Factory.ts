@@ -40,7 +40,7 @@ export function handleAdminUpdate(event: AdminUpdated): void {
   instance.save();
 }
 
-export function handleErc20Creation(event: CreateERC20): void {
+export function handleCreateERC20(event: CreateERC20): void {
   const id = `${event.transaction.hash.toHex()}-${event.logIndex.toString()}`;
   let instance = CreateNewErc20Result.load(id);
   if (instance) {
