@@ -1,0 +1,28 @@
+type CreateNewErc20Result @entity {
+  id: ID!
+  creator: Bytes!
+  erc20Address: Bytes!
+  name: String!
+  symbol: String!
+  decimals: BigInt!
+  value: BigInt!
+  admin: Bytes!
+  txHash: Bytes!
+  timestamp: BigInt!
+}
+
+type UpdateCreationPayment @entity {
+  id: ID!
+  previousPayment: BigInt!
+  newCreationPayment: BigInt!
+  txHash: Bytes!
+  timestamp: BigInt!
+}
+
+type UpdateAdmin @entity {
+  id: ID!
+  previousAdmin: Bytes!
+  newAdmin: Bytes!
+  txHash: Bytes!
+  timestamp: BigInt!
+}

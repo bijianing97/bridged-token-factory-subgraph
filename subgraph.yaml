@@ -1,0 +1,31 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Factory
+    network: reitest
+    source:
+      address: "0x21dF544947ba3E8b3c32561399E88B52Dc8b2823"
+      abi: Factory
+      startBlock: 3302472
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - CreateNewErc20Result
+        - UpdateCreationPayment
+        - UpdateAdmin
+      abis:
+        - name: Factory
+          file: ./abis/Factory.json
+      eventHandlers:
+        - event: CreateERC20(indexed address,indexed address,string,string,uint8,address)
+          handler: handleCreateERC20
+        - event: CreationPaymentUpdated(uint256,uint256)
+          handler: handleCreationPaymentUpdate
+        - event: AdminUpdated(address,address)
+          handler: handleAdminUpdate
+
+      file: ./src/Factory.ts
