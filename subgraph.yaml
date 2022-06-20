@@ -6,9 +6,9 @@ dataSources:
     name: Factory
     network: reitest
     source:
-      address: "0x21dF544947ba3E8b3c32561399E88B52Dc8b2823"
+      address: "0xb2C9dCC0604A379E65F0C7B4288C6663144B12C7"
       abi: Factory
-      startBlock: 3302472
+      startBlock: 3309211
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
