@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: Factory
-    network: reitest
+    network: reimain
     source:
-      address: "0xb2C9dCC0604A379E65F0C7B4288C6663144B12C7"
+      address: "0xF0FceDF9ab45edF14F5C15299E2E0CBE2D41661c"
       abi: Factory
-      startBlock: 3309211
+      startBlock: 5628187
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
